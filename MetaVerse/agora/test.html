@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>
+            AgoraTest
+        </title>
+        <script src="AgoraRTC.js"></script>
+        <script src="AgoraAudioHandler.js"></script>
+        <script src="AgoraVideoHandler.js"></script>
+        <script src="AudioManager.js"></script>
+        <script src="PresentationManager.js"></script>
+    </head>
+    <body>
+        <img id="screen">
+
+        <script>
+            let agHandler = new AgoraVideoHandler();
+            agHandler.joinChannel('test')
+        </script>
+        <div id="tracks" hidden>
+
+        </div>
+    </body>
+</html>

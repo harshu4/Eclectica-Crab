@@ -1,0 +1,346 @@
+<html><head>
+    <title>Eclectica Art Gallery Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css'media="screen" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+
+<style type="text/css">.dg ul{list-style:none;margin:0;padding:0;width:100%;clear:both}.dg.ac{position:fixed;top:0;left:0;right:0;height:0;z-index:0}.dg:not(.ac) .main{overflow:hidden}.dg.main{-webkit-transition:opacity .1s linear;-o-transition:opacity .1s linear;-moz-transition:opacity .1s linear;transition:opacity .1s linear}.dg.main.taller-than-window{overflow-y:auto}.dg.main.taller-than-window .close-button{opacity:1;margin-top:-1px;border-top:1px solid #2c2c2c}.dg.main ul.closed .close-button{opacity:1 !important}.dg.main:hover .close-button,.dg.main .close-button.drag{opacity:1}.dg.main .close-button{-webkit-transition:opacity .1s linear;-o-transition:opacity .1s linear;-moz-transition:opacity .1s linear;transition:opacity .1s linear;border:0;line-height:19px;height:20px;cursor:pointer;text-align:center;background-color:#000}.dg.main .close-button.close-top{position:relative}.dg.main .close-button.close-bottom{position:absolute}.dg.main .close-button:hover{background-color:#111}.dg.a{float:right;margin-right:15px;overflow-y:visible}.dg.a.has-save>ul.close-top{margin-top:0}.dg.a.has-save>ul.close-bottom{margin-top:27px}.dg.a.has-save>ul.closed{margin-top:0}.dg.a .save-row{top:0;z-index:1002}.dg.a .save-row.close-top{position:relative}.dg.a .save-row.close-bottom{position:fixed}.dg li{-webkit-transition:height .1s ease-out;-o-transition:height .1s ease-out;-moz-transition:height .1s ease-out;transition:height .1s ease-out;-webkit-transition:overflow .1s linear;-o-transition:overflow .1s linear;-moz-transition:overflow .1s linear;transition:overflow .1s linear}.dg li:not(.folder){cursor:auto;height:27px;line-height:27px;padding:0 4px 0 5px}.dg li.folder{padding:0;border-left:4px solid transparent}.dg li.title{cursor:pointer;margin-left:-4px}.dg .closed li:not(.title),.dg .closed ul li,.dg .closed ul li>*{height:0;overflow:hidden;border:0}.dg .cr{clear:both;padding-left:3px;height:27px;overflow:hidden}.dg .property-name{cursor:default;float:left;clear:left;width:40%;overflow:hidden;text-overflow:ellipsis}.dg .c{float:left;width:60%;position:relative}.dg .c input[type=text]{border:0;margin-top:4px;padding:3px;width:100%;float:right}.dg .has-slider input[type=text]{width:30%;margin-left:0}.dg .slider{float:left;width:66%;margin-left:-5px;margin-right:0;height:19px;margin-top:4px}.dg .slider-fg{height:100%}.dg .c input[type=checkbox]{margin-top:7px}.dg .c select{margin-top:5px}.dg .cr.function,.dg .cr.function .property-name,.dg .cr.function *,.dg .cr.boolean,.dg .cr.boolean *{cursor:pointer}.dg .cr.color{overflow:visible}.dg .selector{display:none;position:absolute;margin-left:-9px;margin-top:23px;z-index:10}.dg .c:hover .selector,.dg .selector.drag{display:block}.dg li.save-row{padding:0}.dg li.save-row .button{display:inline-block;padding:0px 6px}.dg.dialogue{background-color:#222;width:460px;padding:15px;font-size:13px;line-height:15px}#dg-new-constructor{padding:10px;color:#222;font-family:Monaco, monospace;font-size:10px;border:0;resize:none;box-shadow:inset 1px 1px 1px #888;word-wrap:break-word;margin:12px 0;display:block;width:440px;overflow-y:scroll;height:100px;position:relative}#dg-local-explain{display:none;font-size:11px;line-height:17px;border-radius:3px;background-color:#333;padding:8px;margin-top:10px}#dg-local-explain code{font-size:10px}#dat-gui-save-locally{display:none}.dg{color:#eee;font:11px 'Lucida Grande', sans-serif;text-shadow:0 -1px 0 #111}.dg.main::-webkit-scrollbar{width:5px;background:#1a1a1a}.dg.main::-webkit-scrollbar-corner{height:0;display:none}.dg.main::-webkit-scrollbar-thumb{border-radius:5px;background:#676767}.dg li:not(.folder){background:#1a1a1a;border-bottom:1px solid #2c2c2c}.dg li.save-row{line-height:25px;background:#dad5cb;border:0}.dg li.save-row select{margin-left:5px;width:108px}.dg li.save-row .button{margin-left:5px;margin-top:1px;border-radius:2px;font-size:9px;line-height:7px;padding:4px 4px 5px 4px;background:#c5bdad;color:#fff;text-shadow:0 1px 0 #b0a58f;box-shadow:0 -1px 0 #b0a58f;cursor:pointer}.dg li.save-row .button.gears{background:#c5bdad url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAANCAYAAAB/9ZQ7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAQJJREFUeNpiYKAU/P//PwGIC/ApCABiBSAW+I8AClAcgKxQ4T9hoMAEUrxx2QSGN6+egDX+/vWT4e7N82AMYoPAx/evwWoYoSYbACX2s7KxCxzcsezDh3evFoDEBYTEEqycggWAzA9AuUSQQgeYPa9fPv6/YWm/Acx5IPb7ty/fw+QZblw67vDs8R0YHyQhgObx+yAJkBqmG5dPPDh1aPOGR/eugW0G4vlIoTIfyFcA+QekhhHJhPdQxbiAIguMBTQZrPD7108M6roWYDFQiIAAv6Aow/1bFwXgis+f2LUAynwoIaNcz8XNx3Dl7MEJUDGQpx9gtQ8YCueB+D26OECAAQDadt7e46D42QAAAABJRU5ErkJggg==) 2px 1px no-repeat;height:7px;width:8px}.dg li.save-row .button:hover{background-color:#bab19e;box-shadow:0 -1px 0 #b0a58f}.dg li.folder{border-bottom:0}.dg li.title{padding-left:16px;background:#000 url(data:image/gif;base64,R0lGODlhBQAFAJEAAP////Pz8////////yH5BAEAAAIALAAAAAAFAAUAAAIIlI+hKgFxoCgAOw==) 6px 10px no-repeat;cursor:pointer;border-bottom:1px solid rgba(255,255,255,0.2)}.dg .closed li.title{background-image:url(data:image/gif;base64,R0lGODlhBQAFAJEAAP////Pz8////////yH5BAEAAAIALAAAAAAFAAUAAAIIlGIWqMCbWAEAOw==)}.dg .cr.boolean{border-left:3px solid #806787}.dg .cr.color{border-left:3px solid}.dg .cr.function{border-left:3px solid #e61d5f}.dg .cr.number{border-left:3px solid #2FA1D6}.dg .cr.number input[type=text]{color:#2FA1D6}.dg .cr.string{border-left:3px solid #1ed36f}.dg .cr.string input[type=text]{color:#1ed36f}.dg .cr.function:hover,.dg .cr.boolean:hover{background:#111}.dg .c input[type=text]{background:#303030;outline:none}.dg .c input[type=text]:hover{background:#3c3c3c}.dg .c input[type=text]:focus{background:#494949;color:#fff}.dg .c .slider{background:#303030;cursor:ew-resize}.dg .c .slider-fg{background:#2FA1D6;max-width:100%}.dg .c .slider:hover{background:#3c3c3c}.dg .c .slider:hover .slider-fg{background:#44abda}
+</style><style type="text/css">.dg ul{list-style:none;margin:0;padding:0;width:100%;clear:both}.dg.ac{position:fixed;top:0;left:0;right:0;height:0;z-index:0}.dg:not(.ac) .main{overflow:hidden}.dg.main{-webkit-transition:opacity .1s linear;-o-transition:opacity .1s linear;-moz-transition:opacity .1s linear;transition:opacity .1s linear}.dg.main.taller-than-window{overflow-y:auto}.dg.main.taller-than-window .close-button{opacity:1;margin-top:-1px;border-top:1px solid #2c2c2c}.dg.main ul.closed .close-button{opacity:1 !important}.dg.main:hover .close-button,.dg.main .close-button.drag{opacity:1}.dg.main .close-button{-webkit-transition:opacity .1s linear;-o-transition:opacity .1s linear;-moz-transition:opacity .1s linear;transition:opacity .1s linear;border:0;line-height:19px;height:20px;cursor:pointer;text-align:center;background-color:#000}.dg.main .close-button.close-top{position:relative}.dg.main .close-button.close-bottom{position:absolute}.dg.main .close-button:hover{background-color:#111}.dg.a{float:right;margin-right:15px;overflow-y:visible}.dg.a.has-save>ul.close-top{margin-top:0}.dg.a.has-save>ul.close-bottom{margin-top:27px}.dg.a.has-save>ul.closed{margin-top:0}.dg.a .save-row{top:0;z-index:1002}.dg.a .save-row.close-top{position:relative}.dg.a .save-row.close-bottom{position:fixed}.dg li{-webkit-transition:height .1s ease-out;-o-transition:height .1s ease-out;-moz-transition:height .1s ease-out;transition:height .1s ease-out;-webkit-transition:overflow .1s linear;-o-transition:overflow .1s linear;-moz-transition:overflow .1s linear;transition:overflow .1s linear}.dg li:not(.folder){cursor:auto;height:27px;line-height:27px;padding:0 4px 0 5px}.dg li.folder{padding:0;border-left:4px solid transparent}.dg li.title{cursor:pointer;margin-left:-4px}.dg .closed li:not(.title),.dg .closed ul li,.dg .closed ul li>*{height:0;overflow:hidden;border:0}.dg .cr{clear:both;padding-left:3px;height:27px;overflow:hidden}.dg .property-name{cursor:default;float:left;clear:left;width:40%;overflow:hidden;text-overflow:ellipsis}.dg .c{float:left;width:60%;position:relative}.dg .c input[type=text]{border:0;margin-top:4px;padding:3px;width:100%;float:right}.dg .has-slider input[type=text]{width:30%;margin-left:0}.dg .slider{float:left;width:66%;margin-left:-5px;margin-right:0;height:19px;margin-top:4px}.dg .slider-fg{height:100%}.dg .c input[type=checkbox]{margin-top:7px}.dg .c select{margin-top:5px}.dg .cr.function,.dg .cr.function .property-name,.dg .cr.function *,.dg .cr.boolean,.dg .cr.boolean *{cursor:pointer}.dg .cr.color{overflow:visible}.dg .selector{display:none;position:absolute;margin-left:-9px;margin-top:23px;z-index:10}.dg .c:hover .selector,.dg .selector.drag{display:block}.dg li.save-row{padding:0}.dg li.save-row .button{display:inline-block;padding:0px 6px}.dg.dialogue{background-color:#222;width:460px;padding:15px;font-size:13px;line-height:15px}#dg-new-constructor{padding:10px;color:#222;font-family:Monaco, monospace;font-size:10px;border:0;resize:none;box-shadow:inset 1px 1px 1px #888;word-wrap:break-word;margin:12px 0;display:block;width:440px;overflow-y:scroll;height:100px;position:relative}#dg-local-explain{display:none;font-size:11px;line-height:17px;border-radius:3px;background-color:#333;padding:8px;margin-top:10px}#dg-local-explain code{font-size:10px}#dat-gui-save-locally{display:none}.dg{color:#eee;font:11px 'Lucida Grande', sans-serif;text-shadow:0 -1px 0 #111}.dg.main::-webkit-scrollbar{width:5px;background:#1a1a1a}.dg.main::-webkit-scrollbar-corner{height:0;display:none}.dg.main::-webkit-scrollbar-thumb{border-radius:5px;background:#676767}.dg li:not(.folder){background:#1a1a1a;border-bottom:1px solid #2c2c2c}.dg li.save-row{line-height:25px;background:#dad5cb;border:0}.dg li.save-row select{margin-left:5px;width:108px}.dg li.save-row .button{margin-left:5px;margin-top:1px;border-radius:2px;font-size:9px;line-height:7px;padding:4px 4px 5px 4px;background:#c5bdad;color:#fff;text-shadow:0 1px 0 #b0a58f;box-shadow:0 -1px 0 #b0a58f;cursor:pointer}.dg li.save-row .button.gears{background:#c5bdad url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAANCAYAAAB/9ZQ7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAQJJREFUeNpiYKAU/P//PwGIC/ApCABiBSAW+I8AClAcgKxQ4T9hoMAEUrxx2QSGN6+egDX+/vWT4e7N82AMYoPAx/evwWoYoSYbACX2s7KxCxzcsezDh3evFoDEBYTEEqycggWAzA9AuUSQQgeYPa9fPv6/YWm/Acx5IPb7ty/fw+QZblw67vDs8R0YHyQhgObx+yAJkBqmG5dPPDh1aPOGR/eugW0G4vlIoTIfyFcA+QekhhHJhPdQxbiAIguMBTQZrPD7108M6roWYDFQiIAAv6Aow/1bFwXgis+f2LUAynwoIaNcz8XNx3Dl7MEJUDGQpx9gtQ8YCueB+D26OECAAQDadt7e46D42QAAAABJRU5ErkJggg==) 2px 1px no-repeat;height:7px;width:8px}.dg li.save-row .button:hover{background-color:#bab19e;box-shadow:0 -1px 0 #b0a58f}.dg li.folder{border-bottom:0}.dg li.title{padding-left:16px;background:#000 url(data:image/gif;base64,R0lGODlhBQAFAJEAAP////Pz8////////yH5BAEAAAIALAAAAAAFAAUAAAIIlI+hKgFxoCgAOw==) 6px 10px no-repeat;cursor:pointer;border-bottom:1px solid rgba(255,255,255,0.2)}.dg .closed li.title{background-image:url(data:image/gif;base64,R0lGODlhBQAFAJEAAP////Pz8////////yH5BAEAAAIALAAAAAAFAAUAAAIIlGIWqMCbWAEAOw==)}.dg .cr.boolean{border-left:3px solid #806787}.dg .cr.color{border-left:3px solid}.dg .cr.function{border-left:3px solid #e61d5f}.dg .cr.number{border-left:3px solid #2FA1D6}.dg .cr.number input[type=text]{color:#2FA1D6}.dg .cr.string{border-left:3px solid #1ed36f}.dg .cr.string input[type=text]{color:#1ed36f}.dg .cr.function:hover,.dg .cr.boolean:hover{background:#111}.dg .c input[type=text]{background:#303030;outline:none}.dg .c input[type=text]:hover{background:#3c3c3c}.dg .c input[type=text]:focus{background:#494949;color:#fff}.dg .c .slider{background:#303030;cursor:ew-resize}.dg .c .slider-fg{background:#2FA1D6;max-width:100%}.dg .c .slider:hover{background:#3c3c3c}.dg .c .slider:hover .slider-fg{background:#44abda}
+</style>
+<style type="text/css">
+     .mic:active {
+            transform: translateY(4px);
+        }
+        .unselectable {
+          user-drag: none; 
+          user-select: none;
+          -moz-user-select: none;
+          -webkit-user-drag: none;
+          -webkit-user-select: none;
+          -ms-user-select: none;
+        }
+    .selected{
+      background-color: #ce4848; border-radius: 10px;padding: 3px;
+    }
+</style>
+<script type="text/javascript" src='https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.3.min.js'></script>
+<script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js'></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="https://cdn.jsdelivr.net/npm/ipfs/dist/index.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/ipfs-http-client/dist/index.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/web3@1.5.1/dist/web3.min.js"></script>
+</head>
+<body>
+    <a class="address_text" href="https://pangolin.subscan.io/account/0xb8BBA7F77baf4d3cbaCb2Cf7C4a0125dd2188764">0xb8BBA7F77baf4d3cbaCb2Cf7C4a0125dd2188764</a>
+    <a class="address_text1" href="/">Documentation</a>
+    <div style="position: fixed;display: flex; width: 100%; top: 42%;align-items: center;flex-direction: column; justify-content: center; pointer-events: none;">
+        <h1>Your own metaverse art gallery</h1><br>
+        <h1></h1>
+        <div style="pointer-events: all; margin-top:20px;">
+            <button id="wfh" class="btn-init btn-rpl rpl-red" data-target="#login" data-toggle="modal">Create</button>
+        </div>
+    </div>
+    <div style="position: fixed;display: flex; width: 100%;bottom: 2%;align-items: center;flex-direction: column; justify-content: center; pointer-events: none;">
+       
+        <span class="janta" >Powered by</span>
+        <div style="margin-top: 10px;margin-bottom: 10px;">
+            <img src="/images/crab.png" style="height: 32px;width: auto;margin-right: 10px;"/><span>          </span><img src="./images/ipfs.png" style="height: 32px;width: 32px;"/>
+        </div>
+        <span class="janta" style="font-family: 'Courier New', Courier, monospace;font-size: 12px;font-weight: bold;">Eclectic made by Overclocked Brains</span>
+    </div>
+    <canvas style="width: 100%; height: 100%;" >
+    </canvas>
+
+    <div id="login" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button data-dismiss="modal" class="close">&times;</button>
+            
+                <form style="display: flex;justify-content: center;align-items: center;flex-direction: column;">
+                  
+                        <div class="material-textfield">
+                          <input id="h_title" class="woei" placeholder=" " type="text">
+                          <label class="woe">Art Gallery Name</label>
+                        </div>
+                
+                        <div class="material-textfield">
+                          <input  id="h_sym" class="woei"  placeholder=" " type="text">
+                          <label class="woe">Art Gallery NFT Symbol</label>
+                        </div>
+                
+                        <div style="display: flex;" class="material-textfield">
+                          <input id="h_uri_h"   style="display: none;"  placeholder=" "   accept="image/*" type="file">
+                          <input id="h_uri"  class="woei"  placeholder=" "  type="text" readonly>
+                          <label class="woe">Art Gallery NFT Image</label>
+                          <div style="margin:5px;">
+                            <button class="login" id="upload_nftx">Select</button>
+                          </div>
+                        </div>
+                        <div style="display: flex; flex-direction: column;" class="material-textfield" >
+                          <span style="align-self: flex-start; margin-left: 5px;">Template:</span>
+                          <div style="display: flex; width: 100%;">
+                            <img  draggable="false" ondragstart="return false;" title="left" style="margin-right: 5px;align-self: center;" id="nleft" class="mic" src="images/left-arrow.png" height="32" width="32">
+                            <div id="avnfts" style="flex: 1;display: flex; overflow: auto;overflow: hidden; align-items: center;">
+                        
+                            </div>
+                         <img draggable="false" ondragstart="return false;" title="right" style="margin-left: 5px; align-self: center;" id="nright" class="mic" src="images/right-arrow.png" height="32" width="32">        
+                          </div>
+                        </div>
+
+                        <div style="display: flex;flex-direction: column;" class="material-textfield">
+                          <span style="align-self: flex-start; margin-left: 5px;">Metaverse Deployment (IPFS):</span>
+                          <div style="display: flex;flex-direction: row; align-self: flex-start;">
+                            <div style="margin-right: 15px;">
+                              <input style="outline: none;" type="radio" id="ipfsr" name="dtype" value="ipfsr">
+                              <label for="ipfsr">Remote</label>
+                            </div>
+                            <div>
+                              <input style="outline: none;" type="radio" id="ipfs" name="dtype" value="ipfs">
+                              <label for="ipfs">Local/Self Hosted</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div id="ipfs-data" style="width: 100%;display: flex;flex-direction: column;justify-content: center;align-items: center;">
+                          <div class="material-textfield">
+                            <input id="ipfs-api" class="woei"  placeholder=" " type="text">
+                            <label class="woe">IPFS Api Server</label>
+                          </div>
+                          
+                          <div style="display: flex;flex-direction: row;justify-content: space-between;" class="material-textfield">
+                            <span style="margin-left: 5px;">Custom Headers (Optional):</span>
+                            <div style="margin-right: 5px;" id="add_btn" class="roar">
+                              <div class="cross">  
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div id="pg-data" style="width: 100%;display: flex;flex-direction: column;justify-content: center;align-items: center;">
+                        </div>
+                        <div id="btn_a" style="margin:10px;">
+                            <button class="login" id="comming_soon" >Edit World</button>
+                        </div>
+                        <div id="btn_b" style="margin:10px;">
+                            <button id="gogo" class="login">Let's Rock</button>
+                        </div>
+                        <div id="progress_status" style="display: none;" class="code">
+                        </div>
+                        <div id="metaverse_url" style="display: none;" class="coden">
+                          <a href=""></a>
+                        </div>
+                        <div id="contract_addr" style="display: none;" class="coden">
+                          <a href=""></a>
+                        </div>
+                        <div id="loader" style="width: 80px;height: 80px; overflow: hidden; display: none;">
+                          <div class="socket"  >
+                            <div class="gel center-gel">
+                              <div class="hex-brick h1"></div>
+                              <div class="hex-brick h2"></div>
+                              <div class="hex-brick h3"></div>
+                            </div>
+                            <div class="gel c1 r1">
+                              <div class="hex-brick h1"></div>
+                              <div class="hex-brick h2"></div>
+                              <div class="hex-brick h3"></div>
+                            </div>
+                            <div class="gel c2 r1">
+                              <div class="hex-brick h1"></div>
+                              <div class="hex-brick h2"></div>
+                              <div class="hex-brick h3"></div>
+                            </div>
+                            <div class="gel c3 r1">
+                              <div class="hex-brick h1"></div>
+                              <div class="hex-brick h2"></div>
+                              <div class="hex-brick h3"></div>
+                            </div>
+                            <div class="gel c4 r1">
+                              <div class="hex-brick h1"></div>
+                              <div class="hex-brick h2"></div>
+                              <div class="hex-brick h3"></div>
+                            </div>
+                            <div class="gel c5 r1">
+                              <div class="hex-brick h1"></div>
+                              <div class="hex-brick h2"></div>
+                              <div class="hex-brick h3"></div>
+                            </div>
+                            <div class="gel c6 r1">
+                              <div class="hex-brick h1"></div>
+                              <div class="hex-brick h2"></div>
+                              <div class="hex-brick h3"></div>
+                            </div>
+                      
+                            <div class="gel c7 r2">
+                              <div class="hex-brick h1"></div>
+                              <div class="hex-brick h2"></div>
+                              <div class="hex-brick h3"></div>
+                            </div>
+                      
+                            <div class="gel c8 r2">
+                              <div class="hex-brick h1"></div>
+                              <div class="hex-brick h2"></div>
+                              <div class="hex-brick h3"></div>
+                            </div>
+                            <div class="gel c9 r2">
+                              <div class="hex-brick h1"></div>
+                              <div class="hex-brick h2"></div>
+                              <div class="hex-brick h3"></div>
+                            </div>
+                            <div class="gel c10 r2">
+                              <div class="hex-brick h1"></div>
+                              <div class="hex-brick h2"></div>
+                              <div class="hex-brick h3"></div>
+                            </div>
+                            <div class="gel c11 r2">
+                              <div class="hex-brick h1"></div>
+                              <div class="hex-brick h2"></div>
+                              <div class="hex-brick h3"></div>
+                            </div>
+                            <div class="gel c12 r2">
+                              <div class="hex-brick h1"></div>
+                              <div class="hex-brick h2"></div>
+                              <div class="hex-brick h3"></div>
+                            </div>
+                            <div class="gel c13 r2">
+                              <div class="hex-brick h1"></div>
+                              <div class="hex-brick h2"></div>
+                              <div class="hex-brick h3"></div>
+                            </div>
+                            <div class="gel c14 r2">
+                              <div class="hex-brick h1"></div>
+                              <div class="hex-brick h2"></div>
+                              <div class="hex-brick h3"></div>
+                            </div>
+                            <div class="gel c15 r2">
+                              <div class="hex-brick h1"></div>
+                              <div class="hex-brick h2"></div>
+                              <div class="hex-brick h3"></div>
+                            </div>
+                            <div class="gel c16 r2">
+                              <div class="hex-brick h1"></div>
+                              <div class="hex-brick h2"></div>
+                              <div class="hex-brick h3"></div>
+                            </div>
+                            <div class="gel c17 r2">
+                              <div class="hex-brick h1"></div>
+                              <div class="hex-brick h2"></div>
+                              <div class="hex-brick h3"></div>
+                            </div>
+                            <div class="gel c18 r2">
+                              <div class="hex-brick h1"></div>
+                              <div class="hex-brick h2"></div>
+                              <div class="hex-brick h3"></div>
+                            </div>
+                            <div class="gel c19 r3">
+                              <div class="hex-brick h1"></div>
+                              <div class="hex-brick h2"></div>
+                              <div class="hex-brick h3"></div>
+                            </div>
+                            <div class="gel c20 r3">
+                              <div class="hex-brick h1"></div>
+                              <div class="hex-brick h2"></div>
+                              <div class="hex-brick h3"></div>
+                            </div>
+                            <div class="gel c21 r3">
+                              <div class="hex-brick h1"></div>
+                              <div class="hex-brick h2"></div>
+                              <div class="hex-brick h3"></div>
+                            </div>
+                            <div class="gel c22 r3">
+                              <div class="hex-brick h1"></div>
+                              <div class="hex-brick h2"></div>
+                              <div class="hex-brick h3"></div>
+                            </div>
+                            <div class="gel c23 r3">
+                              <div class="hex-brick h1"></div>
+                              <div class="hex-brick h2"></div>
+                              <div class="hex-brick h3"></div>
+                            </div>
+                            <div class="gel c24 r3">
+                              <div class="hex-brick h1"></div>
+                              <div class="hex-brick h2"></div>
+                              <div class="hex-brick h3"></div>
+                            </div>
+                            <div class="gel c25 r3">
+                              <div class="hex-brick h1"></div>
+                              <div class="hex-brick h2"></div>
+                              <div class="hex-brick h3"></div>
+                            </div>
+                            <div class="gel c26 r3">
+                              <div class="hex-brick h1"></div>
+                              <div class="hex-brick h2"></div>
+                              <div class="hex-brick h3"></div>
+                            </div>
+                            <div class="gel c28 r3">
+                              <div class="hex-brick h1"></div>
+                              <div class="hex-brick h2"></div>
+                              <div class="hex-brick h3"></div>
+                            </div>
+                            <div class="gel c29 r3">
+                              <div class="hex-brick h1"></div>
+                              <div class="hex-brick h2"></div>
+                              <div class="hex-brick h3"></div>
+                            </div>
+                            <div class="gel c30 r3">
+                              <div class="hex-brick h1"></div>
+                              <div class="hex-brick h2"></div>
+                              <div class="hex-brick h3"></div>
+                            </div>
+                            <div class="gel c31 r3">
+                              <div class="hex-brick h1"></div>
+                              <div class="hex-brick h2"></div>
+                              <div class="hex-brick h3"></div>
+                            </div>
+                            <div class="gel c32 r3">
+                              <div class="hex-brick h1"></div>
+                              <div class="hex-brick h2"></div>
+                              <div class="hex-brick h3"></div>
+                            </div>
+                            <div class="gel c33 r3">
+                              <div class="hex-brick h1"></div>
+                              <div class="hex-brick h2"></div>
+                              <div class="hex-brick h3"></div>
+                            </div>
+                            <div class="gel c34 r3">
+                              <div class="hex-brick h1"></div>
+                              <div class="hex-brick h2"></div>
+                              <div class="hex-brick h3"></div>
+                            </div>
+                            <div class="gel c35 r3">
+                              <div class="hex-brick h1"></div>
+                              <div class="hex-brick h2"></div>
+                              <div class="hex-brick h3"></div>
+                            </div>
+                            <div class="gel c36 r3">
+                              <div class="hex-brick h1"></div>
+                              <div class="hex-brick h2"></div>
+                              <div class="hex-brick h3"></div>
+                            </div>
+                            <div class="gel c37 r3">
+                              <div class="hex-brick h1"></div>
+                              <div class="hex-brick h2"></div>
+                              <div class="hex-brick h3"></div>
+                            </div>
+                          
+                            </div>
+                        </div>
+              </form>
+            </div>
+          </div>
+        </div>  
+      </div>
+    <script src="./script/web3shelper.js" type="module"></script>
+    <script src="./script/main.js"></script>
+    <script src="./script/animation-helper.js"></script>
+    <script src="./script/path.js"></script>
+    <script src="./script/ipfs-helper.js"></script>
+    <script src="./script/nftstorage.js" type="module"></script>
+    <script src="./script/crypto-helper.js"></script>
+    <script src="./script/controller.js"></script>
+    <script src="./script/world-helper.js"></script>
+  </body>
+</html>

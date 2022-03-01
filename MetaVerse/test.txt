@@ -1,0 +1,8 @@
+    [DllImport("__Internal")]
+    private static extern void circle_load_balance();
+
+    [DllImport("__Internal")]
+    private static extern void circle_buy(string nft,string amount);
+
+    [DllImport("__Internal")]
+    private static extern void circle_payout();
